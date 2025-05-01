@@ -25,7 +25,10 @@ Git Instructions for Collaboration
 Cloning the Repository
 Clone the repository:
 
-git clone https://github.com/UlyssesTranquilino/ShopTeneo.git
+# git clone https: 
+
+https://github.com/Xies0111/AGAWA-GOODS.git
+
 cd shopteneo
 
 # Creating and Switching to Your Branch
