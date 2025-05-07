@@ -29,7 +29,7 @@ Clone the repository:
 
 https://github.com/Xies0111/AGAWA-GOODS.git
 
-cd shopteneo
+cd AGAWA-GOODS
 
 # Creating and Switching to Your Branch
 
