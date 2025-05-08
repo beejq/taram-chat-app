@@ -1,4 +1,4 @@
-# AGAWA-GOODS
+# Taram-Chat-App
 
 # UPDATED Folder Structure & Data Usage
 Product Data Location:
