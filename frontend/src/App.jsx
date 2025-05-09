@@ -8,7 +8,9 @@ import SignUpPage from './pages/SignUpPage';
 
 import { Routes, Route, Navigate } from 'react-router-dom';
 import { useAuthStore } from './store/useAuthStore';
+
 import { LoaderCircle } from 'lucide-react';
+import { Toaster } from 'react-hot-toast';
 
 import './App.css'
 
@@ -45,6 +47,8 @@ const App = () => {
                     <Route path='/settings' element={<SettingsPage />} />
                     <Route path='/profile' element={authUser? <ProfilePage /> : <Navigate to='/login' />} />
                 </Routes>
+
+                <Toaster />
 
             </div>
         </>
