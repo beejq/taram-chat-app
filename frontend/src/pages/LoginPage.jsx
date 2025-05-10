@@ -5,8 +5,13 @@ import '../styles/LoginPage.css'
 import { Eye, EyeOff, Loader2 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
+import { useTheme } from '../components/ThemeContext.jsx';
+
 
 const LoginPage = () => {
+
+  const { toggleTheme, theme } = useTheme();  
+
   const [showPassword, setShowPassword] = useState(false);
   const [formData, setFormData] = useState({
     email: "",
@@ -23,10 +28,10 @@ const LoginPage = () => {
 
     <div className='whole'>
       <div className="middle-box">
-        <div className="top-bar">
+        <div className={`top-bar ${theme}`}>
           <div className="top-bar-content">
             <p>Account Page</p>
-            <ul className='top-bar-buttons'>
+            <ul className={`top-bar-buttons ${theme}`}>
               <li><button><img src="/minimize.png" alt="" /></button></li>
               <li><button><img src="/maximize.png" alt="" /></button></li>
               <li><button><img src="/close.png" alt="" /></button></li>
@@ -86,7 +91,7 @@ const LoginPage = () => {
           
           {/* Submit Button */}
           <div className="btn-center">
-            <button type="submit" className='submit-btn' disabled={isLoggingIng}>
+            <button type="submit" className={`submit-btn ${theme}`} disabled={isLoggingIng}>
               {isLoggingIng ? (
                 <>
                 <div className=" flex justify-center items-center">

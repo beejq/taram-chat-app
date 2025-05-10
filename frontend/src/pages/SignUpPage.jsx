@@ -6,7 +6,11 @@ import { Eye, EyeOff, Loader2 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import toast from 'react-hot-toast';
 
+import { useTheme } from '../components/ThemeContext.jsx';
+
 const SignUpPage = () => {
+  const { toggleTheme, theme } = useTheme();  
+
   const [showPassword, setShowPassword] = useState(false);
   const [formData, setFormData] = useState({
     fullName: "",
@@ -38,10 +42,10 @@ const SignUpPage = () => {
 
     <div className='whole'>
       <div className="middle-box">
-        <div className="top-bar">
+        <div className={`top-bar ${theme}`}>
           <div className="top-bar-content">
             <p>Account Page</p>
-            <ul className='top-bar-buttons'>
+            <ul className={`top-bar-buttons ${theme}`}>
               <li><button><img src="/minimize.png" alt="" /></button></li>
               <li><button><img src="/maximize.png" alt="" /></button></li>
               <li><button><img src="/close.png" alt="" /></button></li>
@@ -86,10 +90,10 @@ const SignUpPage = () => {
             <label className='label'>
               <span className="label-input-field">Password:</span>
 
-              <div className="relative inline-block">
+              <div className="input-wrapper">
                 <input 
                 type={showPassword ? "text" : "password"}
-                className='input-field pr-10 w-70' 
+                className='input-field ' 
                 placeholder='**********' 
                 value={formData.password} 
                 onChange={(e) => setFormData({ ...formData, password: e.target.value })} 
@@ -97,7 +101,7 @@ const SignUpPage = () => {
 
                 <button
                   type='button'
-                  className='absolute right-2 top-1/2 -translate-y-1/2 text-gray-500'
+                  className='toggle-password'
                   onClick={() => setShowPassword(!showPassword)}
                 >
                   {showPassword ? (
@@ -113,7 +117,7 @@ const SignUpPage = () => {
           
           {/* Submit Button */}
           <div className="btn-center">
-            <button type="submit" className='submit-btn' disabled={isSigningUp}>
+            <button type="submit" className={`submit-btn ${theme}`} disabled={isSigningUp}>
               {isSigningUp ? (
                 <>
                 <div className=" flex justify-center items-center">

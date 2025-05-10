@@ -21,3 +21,100 @@
 body {
   overflow-x: hidden;
 }
+
+/* DEFAULT THEME */
+.app-container.default {
+  background-color: #a0c878;
+  background-image: url(/bg-large.png);
+  background-repeat: no-repeat;
+  background-blend-mode: luminosity;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  min-width: 100vw;
+  min-height: 100vh;
+  margin: 0;
+}
+
+/* ORANGE THEME */
+.app-container.orange {
+  background-color: #d3a25a;
+  background-image: url(/bg-large.png);
+  background-repeat: no-repeat;
+  background-blend-mode: luminosity;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  min-width: 100vw;
+  min-height: 100vh;
+  margin: 0;
+}
+
+/* OLD WINDOWS WALLPAPER */
+.app-container.old-windows {
+  background-image: url(/bg2.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  min-width: 100vw;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.top-bar.old-windows{
+  background-color: #245DDA;
+  color: white;
+}
+
+.top-bar-buttons.old-windows li{
+  background-color: white;
+}
+
+.submit-btn.old-windows{
+  background-color: #245DDA;
+  color: white;
+}
+
+.top-bar.horse{
+  background-color: #ffffff;
+  color: #143d60;
+}
+
+.top-bar-buttons.horse li{
+  background-color: white;
+}
+
+.submit-btn.horse{
+  background-color: #143d60;
+  color: white;
+}
+
+/* HORSE THEME */
+.app-container.horse {
+  background-image: url(/bg3.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  min-width: 100vw;
+  min-height: 100vh;
+  margin: 0;
+}
+
+/* Responisve */
+
+@media (max-width: 640px) {
+  .label{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .input-field{
+    width: 70%;
+  }
+
+  .toggle-password{
+    right:80px;
+  }
+}

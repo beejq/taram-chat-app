@@ -7,3 +7,9 @@
   display: flex;
   flex-direction: column;
 }
+
+@media(max-width:734px){
+  .left-to-right{
+    flex-direction: column;
+  }
+}

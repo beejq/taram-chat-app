@@ -12,11 +12,13 @@ import { useAuthStore } from './store/useAuthStore';
 import { LoaderCircle } from 'lucide-react';
 import { Toaster } from 'react-hot-toast';
 
+import { useTheme } from "./components/ThemeContext.jsx";
+
 import './App.css'
 
 
-
 const App = () => {
+    const { toggleTheme, theme } = useTheme();
     const {authUser, checkAuth, isCheckingAuth} = useAuthStore()
 
     useEffect(() => {
@@ -36,7 +38,7 @@ const App = () => {
 
     return (
         <>
-            <div>
+            <div className={`app-container ${theme}`}>
 
                 <Navbar />
 
