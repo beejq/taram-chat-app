@@ -16,11 +16,11 @@ const HomePage = () => {
   return (
     <div className='h-screen '>
         
-      <div className="flex items-center justify-center pt-20 px-4 gap-12">
+      <div className="flex justify-center pt-20 px-4 gap-12" >
 
       <Sidebar />
       
-        <div className="bg-base-100 rounded-lg shadow-cl w-full max-w-6xl h-[calc(100vh-8rem)]">
+        <div className="bg-base-100 rounded-lg shadow-cl w-full max-w-6xl h-[calc(100vh-12rem)]">
           <div className={`top-bar ${theme}`}>
             <div className="top-bar-content">
               <p>Chat Page</p>

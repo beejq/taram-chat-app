@@ -19,7 +19,9 @@ import './App.css'
 
 const App = () => {
     const { toggleTheme, theme } = useTheme();
-    const {authUser, checkAuth, isCheckingAuth} = useAuthStore()
+    const {authUser, checkAuth, isCheckingAuth, onlineUsers} = useAuthStore()
+
+    console.log({onlineUsers});
 
     useEffect(() => {
         checkAuth()
