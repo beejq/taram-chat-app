@@ -35,3 +35,6 @@ Step-by-Step Guide:
   - Go to Frontend Folder and:
 
         npm run dev
+
+
+Full Project Documentation Here: [Torres - Taram Chat App Term Paper.pdf](https://github.com/user-attachments/files/20147441/Torres.-.Taram.Chat.App.Term.Paper.pdf)
