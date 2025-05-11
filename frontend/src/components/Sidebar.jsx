@@ -55,7 +55,7 @@ const Sidebar = () => {
           <span className="text-xs text-zinc-500">({onlineUsers.length - 1} online)</span>
         </div>      
 
-        <div className="overflow-y-auto max-h-[300px] w-full py-3 xl:max-h-[550px]">
+        <div className="overflow-y-auto max-h-[300px] w-full py-3 xl:max-h-[350px]">
             {filteredUsers.map((user) => (
                 <button
                 key={user._id}
