@@ -1,0 +1,22 @@
+{
+  "name": "taram-chat-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build":"",
+    "start":""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/beejq/taram-chat-app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/beejq/taram-chat-app/issues"
+  },
+  "homepage": "https://github.com/beejq/taram-chat-app#readme"
+}
