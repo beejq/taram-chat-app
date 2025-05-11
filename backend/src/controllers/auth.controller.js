@@ -100,7 +100,7 @@ export const updateProfile = async (req, res) => {
         const uploadResponse = await cloudinary.uploader.upload(profilePic);
         const updatedUser = await User.findByIdAndUpdate(userId, {profilePic:uploadResponse.secure_url})
 
-        res.status(200).json(updateUser);
+        res.status(200).json(updatedUser);
 
     } catch (error) {
         console.log("Error in update profile:", error);

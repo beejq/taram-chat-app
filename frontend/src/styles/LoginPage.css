@@ -68,13 +68,11 @@
 }
 
 .input-field {
-  width: 100%;
-  padding: 10px;
-  padding-right: 2.5rem; /* enough room for eye icon */
+  border: solid 2px #143d60;
   border-radius: 8px;
-  border: 2px solid #143d60;
-  font-size: 1rem;
-  box-sizing: border-box;
+  background-color: #f9f9f9;
+  padding: 4px;
+  width: 100%;
 }
 
 .form {
@@ -92,7 +90,7 @@
   font-size: 20px;
 }
 
-.submit-btn:hover{
+.submit-btn:hover {
   background-color: #76aa5d;
 }
 
@@ -110,24 +108,3 @@
 .link {
   color: #eb5b00;
 }
-
-.input-wrapper {
-  position: relative;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-
-.toggle-password {
-  position: absolute;
-  top: 50%;
-  right: 8px;
-  transform: translateY(-50%);
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 0;
-  display: flex;
-  align-items: center;
-}
-
