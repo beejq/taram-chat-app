@@ -4,8 +4,10 @@ import http from "http";
 const userSocketMap = {}; // { userId: socketId }
 
 export function getReceiverSocketId(userId) {
-  return userSocketMap[userId];
+    return userSocketMap[userId];
 }
+
+let io;
 
 export function createServer(app) {
   const server = http.createServer(app);
@@ -32,3 +34,5 @@ export function createServer(app) {
 
   return server;
 }
+
+export { io };
