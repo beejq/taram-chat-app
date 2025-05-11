@@ -25,13 +25,17 @@ app.use(
     })
 );
 
+console.log("Registering auth routes...");
 app.use("/api/auth", authRoutes);
+console.log("Registering message routes...");
 app.use("/api/messages", messageRoutes);
 
 if(process.env.NODE_ENV === "production"){
+    console.log("Setting static files for production...");
     app.use(express.static(path.join(__dirname, "../frontend/dist")));
 
-    app.get("/*", (req, res) => {
+    console.log("Registering wildcard route...");
+    app.get("*", (req, res) => {
         res.sendFile(path.join(__dirname, "../frontend", "dist", "index.html"));
     });
 }
