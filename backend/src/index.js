@@ -30,13 +30,23 @@ app.use("/api/auth", authRoutes);
 console.log("Registering message routes...");
 app.use("/api/messages", messageRoutes);
 
-if(process.env.NODE_ENV === "production"){
-    console.log("Setting static files for production...");
+if (process.env.NODE_ENV === "production") {
     app.use(express.static(path.join(__dirname, "../frontend/dist")));
 
-    console.log("Registering wildcard route...");
-    app.get("/*", (req, res) => {
-        res.sendFile(path.join(__dirname, "../frontend", "dist", "index.html"));
+    app.get("/", (req, res) => {
+        res.sendFile(path.join(__dirname, "../frontend/dist", "index.html"));
+    });
+    app.get("/login", (req, res) => {
+        res.sendFile(path.join(__dirname, "../frontend/dist", "index.html"));
+    });
+    app.get("/signup", (req, res) => {
+        res.sendFile(path.join(__dirname, "../frontend/dist", "index.html"));
+    });
+    app.get("/profile", (req, res) => {
+        res.sendFile(path.join(__dirname, "../frontend/dist", "index.html"));
+    });
+    app.get("/settings", (req, res) => {
+        res.sendFile(path.join(__dirname, "../frontend/dist", "index.html"));
     });
 }
 
